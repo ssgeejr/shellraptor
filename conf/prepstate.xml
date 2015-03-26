@@ -1,0 +1,14 @@
+<raptor>
+        <selectA>
+          <query>select * 
+          From C where id = ?</query>
+        </selectA>
+        <selectB>
+          <query>select * 
+          From B where id = ?</query>
+        </selectB>
+        <selectC>
+          <query>select * 
+          From C where id = ?</query>
+        </selectC>
+</raptor>

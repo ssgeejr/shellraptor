@@ -1,0 +1,16 @@
+<raptor>
+        <stdout>
+          <alias>default</alias>
+          <outputfile>x:/tmp/dc_test_out.csv</outputfile>
+<!-- to dump to the command line only, set your outputfile = stdout
+          <outputfile>stdout</outputfile>
+-->
+          <password>shellraptor</password>
+          <delimter>^</delimter>
+          <sql>select * from ATBAT</sql>
+<!-- pipe out columns name true/false -->
+          <with-column-names>true</with-column-names>
+<!-- Show -ONLY- results...not details true/false -->
+          <silent>true</silent>
+        </stdout>
+</raptor>

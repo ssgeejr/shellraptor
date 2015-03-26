@@ -1,0 +1,23 @@
+<raptor>
+        <default>
+          <driver>com.mysql.jdbc.Driver</driver>
+          <url>jdbc:mysql://donuts:3306/perldemo</url>
+          <username>perluser</username>
+          <password>perlpass</password>
+          <maxrows>-1</maxrows>
+        </default>
+        
+        <quartztest>
+          <driver>com.mysql.jdbc.Driver</driver>
+          <url>jdbc:mysql://donuts/quartztest</url>
+          <username>quartzpoc</username>
+          <password>quartzpass</password>
+          <maxrows>-1</maxrows>
+        </quartztest>
+</raptor>
+
+<!-- 
+grant all resources on quartztest.* to quartzpoc@'%' identified by 'quartzpass';
+
+S
+ -->
