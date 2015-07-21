@@ -16,17 +16,26 @@ import org.junit.Test;
  *
  */
 public class ShellRaptorUnitTest {
-	private Column testItem = null;
+	public static Column testItem = null;
 	
-	private String columnName = "username";
-	private String columnType = "varchar";
-	private String columnLength = "32";
-	private String decimalLength = "0";
-	private String nullable = "1";
-	private String defaultValue = "DEFAULT-VALUE";
-	private String remarks = "these are my test remarks";
+	private static String columnName = "username";
+	private static String columnType = "varchar";
+	private static String columnLength = "32";
+	private static String decimalLength = "0";
+	private static String nullable = "1";
+	private static String defaultValue = "DEFAULT-VALUE";
+	private static String remarks = "these are my test remarks";
 	
-	public ShellRaptorUnitTest(){
+	/**
+	 * Standard Constructor, called before every test
+	 */
+	public ShellRaptorUnitTest(){}
+	
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
 //		   * @param cname Column Name
 //		   * @param cType Column Type
 //		   * @param cLen Column Length
@@ -35,13 +44,6 @@ public class ShellRaptorUnitTest {
 //		   * @param defVal Default Value
 //		   * @param rmk Rarks
 		testItem = new Column(columnName,columnType,columnLength,decimalLength,nullable,defaultValue,remarks);
-	}
-	
-	/**
-	 * @throws java.lang.Exception
-	 */
-//	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
 	}
 
 	/**
