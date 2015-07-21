@@ -42,6 +42,7 @@ public class ShellRaptorUnitTest {
 	 */
 //	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
+		
 	}
 
 	/**
