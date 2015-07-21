@@ -120,4 +120,8 @@ StdOut Example File
         </stdout>
 </raptor>
 
-
+#### Build notes
+mvn clean package
+mvn test
+mvn site
+mvn surefire-report:report

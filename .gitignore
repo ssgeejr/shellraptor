@@ -1,0 +1,40 @@
+# Compiled Objects #
+*.class
+ 
+# Package Files #
+*.jar
+*.war
+*.ear
+*.db
+ 
+######################
+# Windows
+######################
+ 
+# Windows image file caches
+Thumbs.db 
+ 
+# Folder config file
+Desktop.ini
+ 
+######################
+# OSX
+######################
+ 
+.DS_Store
+.svn
+ 
+# Thumbnails
+._*
+ 
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+ 
+# Directories, Logs and Logfiles #
+target/
+log/
+logs/
+*.log
+*.logs
+*.out
