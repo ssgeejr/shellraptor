@@ -10,6 +10,17 @@ public class Column {
   private int columnNullable = 0;
 
   public Column(){}
+  
+  /**
+   * 
+   * @param cname Column Name
+   * @param cType Column Type
+   * @param cLen Column Length
+   * @param dLen Decimal Length
+   * @param cNull Nullable
+   * @param defVal Default Value
+   * @param rmk Rarks
+   */
   public Column(String cname,
                 String cType,
                 String cLen,
