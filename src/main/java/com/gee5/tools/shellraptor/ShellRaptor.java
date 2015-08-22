@@ -27,6 +27,7 @@ public class ShellRaptor extends SQLEditor{
   private boolean verbose = false;
   private TagReader stdoutReader = null;
   private final String CONFIG_FILE = "conf/shellraptor.xml";
+  private final String USER_CONFIG = System.getProperty("user.home") + "/.shellraptor";
   private String driver = null;
   private String url = null;
   private String username = null;
@@ -112,10 +113,10 @@ public class ShellRaptor extends SQLEditor{
         if (configFile != null) {
           tReader = new TagReader(configFile);
         } else {
-        	File f = new File("~/.shellraptor");	
+        	File f = new File(USER_CONFIG);	
         	if(f.exists()){
 //                System.out.println("File exists");
-                tReader = new TagReader("~/.shellraptor");
+                tReader = new TagReader(USER_CONFIG);
             }else{
 //                System.out.println("File not found!");
                 tReader = new TagReader(CONFIG_FILE);
