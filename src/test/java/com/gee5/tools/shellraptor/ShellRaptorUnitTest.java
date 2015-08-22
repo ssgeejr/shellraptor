@@ -26,6 +26,8 @@ public class ShellRaptorUnitTest {
 	private static String defaultValue = "DEFAULT-VALUE";
 	private static String remarks = "these are my test remarks";
 	
+	private static final int TEST_BUILD_USE_ONLY = 1111;
+	
 	/**
 	 * Standard Constructor, called before every test
 	 */

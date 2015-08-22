@@ -37,7 +37,7 @@ public class ShellRaptor extends SQLEditor{
   private boolean testOnly = false;
 
   public ShellRaptor(String args[]){
-
+	new ClassloadManager(verbose);
     try {
       if(args.length > 0){
         try{
@@ -105,14 +105,21 @@ public class ShellRaptor extends SQLEditor{
         }
       }//end if args > 0
 
-      new ClassloadManager(verbose);
+     
       if(verbose)
         System.out.println("{**** " + new java.util.Date().toString() + " ****}");
 
         if (configFile != null) {
           tReader = new TagReader(configFile);
         } else {
-          tReader = new TagReader(CONFIG_FILE);
+        	File f = new File("~/.shellraptor");	
+        	if(f.exists()){
+//                System.out.println("File exists");
+                tReader = new TagReader("~/.shellraptor");
+            }else{
+//                System.out.println("File not found!");
+                tReader = new TagReader(CONFIG_FILE);
+            }
         }
 
         if (driver == null)

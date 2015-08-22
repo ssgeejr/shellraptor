@@ -28,6 +28,7 @@ public class ClassloadManager{
 
   protected ClassloadManager(boolean verbose) {
     File workingDirectory = new File(extDir);
+    
     if (workingDirectory.isDirectory()) {
         File[] fileArray = workingDirectory.listFiles();
         for (int i = 0; i < fileArray.length; i++) {

@@ -9,6 +9,7 @@ public class Column {
   private String columnType = "";
   private int columnNullable = 0;
 
+  
   public Column(){}
   
   /**

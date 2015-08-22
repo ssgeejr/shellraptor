@@ -18,6 +18,5 @@
 
 <!-- 
 grant all resources on quartztest.* to quartzpoc@'%' identified by 'quartzpass';
-
 S
  -->

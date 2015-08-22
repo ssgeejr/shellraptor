@@ -4,17 +4,17 @@
 
 	<groupId>gee-5</groupId>
 	<artifactId>ShellRaptor</artifactId>
-	<version>5.2.2</version>
+	<version>5.2.2-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<url>https://github.com/ssgeejr/shellraptor</url>
 	<name>ShellRaptor</name>
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<build>
-		<finalName>shellRaptor-${project.version}</finalName>
+		<finalName>shellRaptor-${version}</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -25,17 +25,15 @@
 				</configuration>
 			</plugin>
 			<plugin>
-			    <groupId>org.apache.maven.plugins</groupId>
-			    <artifactId>maven-jar-plugin</artifactId>
-			    <version>2.6</version>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.6</version>
 				<configuration>
 					<archive>
 						<manifest>
-							<!-- 
 							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>lib/</classpathPrefix>
-							 -->
 							<mainClass>com.gee5.tools.shellraptor.ShellRaptor</mainClass>
 						</manifest>
 					</archive>
@@ -54,22 +52,27 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.7</version>
+			</plugin>
 		</plugins>
 	</build>
-  <reporting>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-report-plugin</artifactId>
-        <version>2.18.1</version>
-      </plugin>
-       <plugin>
-           <groupId>org.apache.maven.plugins</groupId>
-           <artifactId>maven-jxr-plugin</artifactId>
-           <version>2.3</version>
-       </plugin>
-    </plugins>
-  </reporting>
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+				<version>2.18.1</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jxr-plugin</artifactId>
+				<version>2.3</version>
+			</plugin>
+		</plugins>
+	</reporting>
 	<dependencies>
 		<dependency>
 			<groupId>log4j</groupId>
@@ -84,21 +87,19 @@
 			<version>4.10</version>
 			<scope>test</scope>
 		</dependency>
-
 		<!-- Only need if you plan on running the program inside an editor -->
-		<!-- 
-		<dependency>
-			<groupId>com.oracle</groupId>
-			<artifactId>ojdbc14</artifactId>
-			<version>10.2.0.4.0</version>
-		</dependency>
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.21</version>
-			<scope>provided</scope>
-		</dependency>
-		 -->
+		<!-- <dependency> <groupId>com.oracle</groupId> <artifactId>ojdbc14</artifactId> 
+			<version>10.2.0.4.0</version> </dependency> <dependency> <groupId>mysql</groupId> 
+			<artifactId>mysql-connector-java</artifactId> <version>5.1.21</version> <scope>provided</scope> 
+			</dependency> -->
 	</dependencies>
-
+	<!-- 
+	<distributionManagement>
+	    <repository>
+	        <id>aws-snapshots</id>
+	        <name>aws-snapshots-releases</name>
+	        <url>http://54.86.40.171:8081/artifactory/libs-snapshot-local</url>
+	    </repository>
+	</distributionManagement>
+ 	-->
 </project>
