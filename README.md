@@ -1,6 +1,5 @@
 # ShellRaptor
 
-
 A command-line SQL Utility; Supports any JDBC compliant database.
  
 ShellRaptor: A command-line SQL Utility; Supports any JDBC compliant database.
@@ -125,3 +124,5 @@ mvn clean package
 mvn test
 mvn site
 mvn surefire-report:report
+
+Travis-CI testing
