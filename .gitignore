@@ -6,6 +6,12 @@
 *.war
 *.ear
 *.db
+*.tar
+*.gz
+*.tgz
+*.rpm
+*.pkg
+*.egg
  
 ######################
 # Windows
