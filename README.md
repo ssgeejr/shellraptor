@@ -6,6 +6,8 @@ A command-line SQL Utility; Supports any JDBC compliant database.
 ShellRaptor: A command-line SQL Utility; Supports any JDBC compliant database.
 Release 12.07.05 http://shellraptor.sourceforge.net
 
+Adding Docker support
+
 One new change in this release: now includes the ability to load both .jar and .zip
 library extensions.
 
