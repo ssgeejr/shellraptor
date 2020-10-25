@@ -92,6 +92,11 @@
 			<version>10.2.0.4.0</version> </dependency> <dependency> <groupId>mysql</groupId> 
 			<artifactId>mysql-connector-java</artifactId> <version>5.1.21</version> <scope>provided</scope> 
 			</dependency> -->
+<dependency>
+<groupId>org.sonarsource.scanner.maven</groupId>
+<artifactId>sonar-maven-plugin</artifactId>
+<version>3.2</version>
+</dependency>
 	</dependencies>
 	<!-- 
 	<distributionManagement>
@@ -102,4 +107,18 @@
 	    </repository>
 	</distributionManagement>
  	-->
+<profiles>
+<profile>
+<id>sonar</id>
+<activation>
+<activeByDefault>true</activeByDefault>
+</activation>
+<properties>
+<!-- Optional URL to server. Default value is http://localhost:9000 -->
+<sonar.host.url>
+http://firefly.sprint.com/sonarqube
+</sonar.host.url>
+</properties>
+</profile>
+</profiles>
 </project>

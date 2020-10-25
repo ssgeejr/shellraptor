@@ -1,7 +1,7 @@
 package com.gee5.tools.shellraptor;
 
 public class PreparedStmtArguement {
-  public final static String[] ARG_TYPE = {"INTEGER","FLOAT","DOUBLE","STRING"};
+  protected final static String[] ARG_TYPE = {"INTEGER","FLOAT","DOUBLE","STRING"};
   public final static int INTEGER = 0;
   public final static int FLOAT = 1;
   public final static int DOUBLE = 2;

@@ -22,7 +22,7 @@ public class ConnectionManager {
   public ConnectionManager(){}
 
   public Connection getConnection(String driver, String url,
-                                  String username, String password) throws Exception{
+                                  String username, String password) throws NullPointerException, Exception{
     if(primaryConn == null  ||  primaryConn.isClosed()){
       Class.forName(driver);
       primaryConn = DriverManager.getConnection(url,username,password);

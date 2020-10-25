@@ -31,7 +31,8 @@ public abstract class PreparedStatementManager extends Hashtable{
   public void savePreStatements(String fileName) throws Exception{
     if(!fileName.toLowerCase().endsWith(".xml")) fileName += ".xml";
     File out = new File(fileName);
-    if(out.exists()) out.delete();
+    boolean isDeleted = false;
+    if(out.exists()) isDeleted = out.delete();
     DataOutputStream output = null;
     try{
       output = new DataOutputStream(new FileOutputStream(out));
