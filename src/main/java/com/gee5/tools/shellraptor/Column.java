@@ -1,5 +1,6 @@
 package com.gee5.tools.shellraptor;
 
+
 public class Column {
   private String columnName = "";
   private int columnLen = 0;
@@ -13,7 +14,7 @@ public class Column {
   public Column(){}
   
   /**
-   * 
+   * Test 1
    * @param cname Column Name
    * @param cType Column Type
    * @param cLen Column Length
