@@ -14,7 +14,7 @@ public class Column {
   public Column(){}
   
   /**
-   * Test 1
+   * Test 2
    * @param cname Column Name
    * @param cType Column Type
    * @param cLen Column Length
