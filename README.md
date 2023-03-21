@@ -1,5 +1,8 @@
 # ShellRaptor
 
+March 21, 2023:  Added new maven.xml build file in github.
+
+
 A command-line SQL Utility; Supports any JDBC compliant database.
  
 ShellRaptor: A command-line SQL Utility; Supports any JDBC compliant database.
