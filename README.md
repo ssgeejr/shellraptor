@@ -1,5 +1,7 @@
 # ShellRaptor
 
+Jan 2025: Moving from simple workflow to Java-CICD Pipeline
+
 March 21, 2023:  Added new maven.xml build file in github. Test 3
 
 
