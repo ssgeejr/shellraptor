@@ -1,0 +1,61 @@
+
+
+name: ShellRaptor CI Pipeline
+
+on:
+  push:
+    branches:
+      - cicd
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the code
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Java (adjust version as needed)
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin' # Options: 'temurin', 'zulu', etc.
+          java-version: '17'
+
+      # Step 3: Compile the code
+      - name: Compile Code
+        run: mvn clean compile
+
+  sonarqube:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      # Step 1: Check out the code
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Step 2: Run SonarQube analysis on a remote host
+      - name: Run SonarQube Analysis
+        env:
+          SONAR_HOST_URL: http://10.10.10.1
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: |
+          echo "Starting SonarQube analysis on remote host..."
+          mvn sonar:sonar -Dsonar.projectKey=shellraptor \
+                          -Dsonar.host.url=$SONAR_HOST_URL \
+                          -Dsonar.login=$SONAR_TOKEN
+
+  test:
+    runs-on: ubuntu-latest
+    needs: sonarqube
+
+    steps:
+      # Step 1: Check out the code
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Step 2: Run Tests
+      - name: Run Unit Tests
+        run: mvn test
