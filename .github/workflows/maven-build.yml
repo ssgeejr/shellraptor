@@ -24,5 +24,5 @@ jobs:
     - name: Rename JAR file
       run: |
         echo "Renaming JAR file..."
-        mv target/*.jar target/${{ secrets.JAR_NAME }}
+        mv target/*.jar target/${{ secrets.JAR_NAME }}.jar
       shell: bash
